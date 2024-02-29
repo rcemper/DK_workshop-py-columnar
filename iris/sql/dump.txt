@@ -1,0 +1,20 @@
+USE DATABASE "TEST"
+GO
+CREATE SCHEMA Test
+GO
+CREATE TABLE Test.PurchaseOrderColumnar (
+    Reference INTEGER,
+    Customer VARCHAR(225),
+    PaymentDate DATE,
+    Vat NUMERIC(10,2),
+    Amount NUMERIC(10,2) WITH STORAGETYPE = COLUMNAR,
+    Status VARCHAR(10) WITH STORAGETYPE = COLUMNAR)
+GO
+CREATE TABLE Test.PurchaseOrderRow (
+    Reference INTEGER,
+    Customer VARCHAR(225),
+    PaymentDate DATE,
+    Vat NUMERIC(10,2),
+    Amount NUMERIC(10,2),
+    Status VARCHAR(10))
+GO

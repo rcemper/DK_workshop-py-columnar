@@ -1,0 +1,5 @@
+names==0.3.0
+numpy==1.26.2
+matplotlib==3.8.2
+random-address==1.1.1
+phone-gen==2.3.15
